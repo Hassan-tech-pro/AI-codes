@@ -1,0 +1,24 @@
+Model Name,Category,Main Use Case,Data Required,Speed (Relative),Install Command,Import Code,Key Parameters,Learning Type
+Linear Regression,ML,Predict continuous values,Numeric tabular,Very Fast,pip install scikit-learn,from sklearn.linear_model import LinearRegression,"fit_intercept, normalize",Supervised
+Logistic Regression,ML,Binary/Multiclass classification,Numeric tabular,Very Fast,pip install scikit-learn,from sklearn.linear_model import LogisticRegression,"penalty, C, max_iter",Supervised
+Decision Tree,ML,"Classification, regression",Numeric/categorical tabular,Fast,pip install scikit-learn,from sklearn.tree import DecisionTreeClassifier,"max_depth, min_samples_split",Supervised
+Random Forest,ML,"Classification, regression",Numeric/categorical tabular,Medium,pip install scikit-learn,from sklearn.ensemble import RandomForestClassifier,"n_estimators, max_depth",Supervised
+XGBoost,ML,"Classification, regression",Numeric/categorical tabular,Medium,pip install xgboost,from xgboost import XGBClassifier,"n_estimators, learning_rate, max_depth",Supervised
+KNN,ML,"Classification, regression",Numeric tabular,Slow (large data),pip install scikit-learn,from sklearn.neighbors import KNeighborsClassifier,"n_neighbors, weights",Supervised
+K-Means,ML,Clustering,Numeric tabular,Fast,pip install scikit-learn,from sklearn.cluster import KMeans,"n_clusters, init",Unsupervised
+PCA,ML,Dimensionality reduction,Numeric tabular,Fast,pip install scikit-learn,from sklearn.decomposition import PCA,n_components,Unsupervised
+CNN,DL,Image recognition,Images,Medium-Slow,pip install torch torchvision,import torch.nn as nn,"kernel_size, filters",Supervised
+RNN,DL,Sequence modeling,"Time series, text",Medium,pip install torch,import torch.nn as nn,"hidden_size, num_layers",Supervised
+LSTM,DL,Sequence modeling,"Time series, text",Medium,pip install torch,import torch.nn as nn,"hidden_size, num_layers",Supervised
+GAN,DL,Generate new data,"Images, audio, text",Slow,pip install torch,import torch.nn as nn,"latent_dim, learning_rate",Unsupervised
+Autoencoder,DL,"Feature learning, compression","Numeric, images",Medium,pip install torch,import torch.nn as nn,latent_dim,Unsupervised
+BERT,NLP/LLM,Text understanding,Text,Medium,pip install transformers,from transformers import BertModel,"model_name, max_length",Supervised/Pretrained
+GPT-3,NLP/LLM,Text generation,Text,"Slow (training), Fast (inference)",pip install openai,import openai,"model, max_tokens",Pretrained
+T5,NLP/LLM,Text-to-text tasks,Text,Medium,pip install transformers,from transformers import T5ForConditionalGeneration,"model_name, max_length",Supervised/Pretrained
+YOLOv8,CV/DL,Object detection,Images/videos,Medium,pip install ultralytics,from ultralytics import YOLO,"conf, iou",Supervised
+ResNet,CV/DL,Image classification,Images,Medium,pip install torchvision,from torchvision import models,"num_classes, pretrained",Supervised
+UNet,CV/DL,Image segmentation,Images,Medium,pip install torch,import torch.nn as nn,"num_layers, filters",Supervised
+Stable Diffusion,GenAI,Text-to-image,"Text, images",Slow,pip install diffusers,from diffusers import StableDiffusionPipeline,"num_inference_steps, guidance_scale",Pretrained
+DALL·E,GenAI,Text-to-image,"Text, images",Medium,pip install openai,import openai,"model, size",Pretrained
+DQN,RL,Game playing,Environment states,Medium,pip install gym torch,import torch.nn as nn,"gamma, epsilon",Reinforcement
+PPO,RL,Game playing,Environment states,Medium,pip install stable-baselines3,from stable_baselines3 import PPO,"learning_rate, n_steps",Reinforcement
